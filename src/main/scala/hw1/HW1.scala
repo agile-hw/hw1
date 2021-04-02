@@ -33,7 +33,7 @@ class Problem2 extends Module {
   * c1: 5-bit Int
   * c2: 5-bit Int
   * io.enable: Bool Input
-  * io.radix: 5-bit UInt Input
+  * io.x: 5-bit UInt Input
   * io.out: ???-bit UInt Output
   */
 class PolyEval(c0: Int, c1: Int, c2: Int) extends Module {
@@ -45,8 +45,8 @@ class PolyEval(c0: Int, c1: Int, c2: Int) extends Module {
 
 
 /**
-  * onlyAdd: Boolean
-  * io.useAdd: Bool Input
+  * onlyAdder: Boolean
+  * io.doAdd: Bool Input
   * io.real0: 5-bit SInt Input
   * io.imag0: 5-bit SInt Input
   * io.real1: 5-bit SInt Input
