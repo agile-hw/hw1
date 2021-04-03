@@ -1,7 +1,7 @@
 Homework 1 - Intro to Chisel and Scala
 =======================
 
-## Problem 1 - Combinational Logic 
+## Problem 1 - Combinational Logic (20pts)
 To familiarize ourselves with the Chisel bit-wise operators we will fill in the module `CombLogic` that satisfies these specs:
 - IO
     - inputs:
@@ -22,11 +22,11 @@ To familiarize ourselves with the Chisel bit-wise operators we will fill in the 
 |  1  | top 3 bits of `x` | bottom 3 bits of `y` |
 
 
-## Problem 2 - Write a Chisel Test
+## Problem 2 - Write a Chisel Test (10pts)
 We can use Scala to write exhaustive tests for our modules assuming the input space is relatively small. In this problem, we provide the `Problem2` in the file `src/main/scala/hw1/HW1.scala`. Your job is to edit the file `src/test/scala/hw1/HW1Spec.scala` and fill in the unimplemented test using Chisel `peek, poke, and expect`. Make sure to test that the output is correct for all `8` possible input values. You may run your test using the command `sbt test` from your terminal. We strongly encourage you to write your own tests for the other problems as well but they will not be graded.
 
 
-## Problem 3 - Polynomial Evaluator
+## Problem 3 - Polynomial Evaluator (20pts)
 Given `3` input coefficients `c0, c1, and c2` and variable `x`, fill in the rest of the `PolyEval` implement the module:
 - Module Scala Parameters
     - c0: positive Int (<= 5b)
@@ -45,7 +45,7 @@ Given `3` input coefficients `c0, c1, and c2` and variable `x`, fill in the rest
         - if `enable` is low: `0`
 
 
-## Problem 4 - ComplexALU
+## Problem 4 - ComplexALU (50pts)
 Fill in the module `ComplexALU`. It is an adder/subtractor for complex numbers. If the Scala parameter `onlyAdder` is `true`, the module should not generate any hardware for subtraction logic. The module's IO is given to you this time, and the behavior should follow this pseudo-code:
 - if `doAdd` sum the real inputs and sum the imaginary inputs
 - if not `doAdd` find difference between the real inputs and the difference between the imaginary inputs

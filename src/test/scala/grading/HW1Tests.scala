@@ -13,7 +13,7 @@ import org.junit.runner.RunWith
 class HW1Grader extends JUnitSuite {
 
   @Test
-  @GradedTest(name="CombLogicOut0", max_score=30)
+  @GradedTest(name="CombLogicOut0", max_score=10)
   def verifyCombLogicOut0() {
 
     // Capture all of the console output from the test
@@ -30,7 +30,7 @@ class HW1Grader extends JUnitSuite {
   }
 
   @Test
-  @GradedTest(name="CombLogicOut1", max_score=30)
+  @GradedTest(name="CombLogicOut1", max_score=10)
   def verifyCombLogicOut1() {
 
     // Capture all of the console output from the test
@@ -47,7 +47,7 @@ class HW1Grader extends JUnitSuite {
   }
 
   @Test
-  @GradedTest(name="Problem2", max_score=30)
+  @GradedTest(name="Problem2", max_score=10)
   def verifyProblem2() {
 
     // Capture all of the console output from the test
@@ -64,7 +64,7 @@ class HW1Grader extends JUnitSuite {
   }
 
   @Test
-  @GradedTest(name="PolyEvalOut", max_score=30)
+  @GradedTest(name="PolyEvalOut", max_score=20)
   def verifyPolyEvalOut() {
 
     // Capture all of the console output from the test
@@ -81,7 +81,7 @@ class HW1Grader extends JUnitSuite {
   }
 
   @Test
-  @GradedTest(name="ComplexALUrealOutOnlyAdder", max_score=30)
+  @GradedTest(name="ComplexALUrealOutOnlyAdder", max_score=10)
   def verifyComplexALUrealOutOnlyAdder() {
 
     // Capture all of the console output from the test
@@ -98,7 +98,7 @@ class HW1Grader extends JUnitSuite {
   }
 
   @Test
-  @GradedTest(name="ComplexALUrealOut", max_score=30)
+  @GradedTest(name="ComplexALUrealOut", max_score=15)
   def verifyComplexALUrealOut() {
 
     // Capture all of the console output from the test
@@ -115,7 +115,7 @@ class HW1Grader extends JUnitSuite {
   }
 
   @Test
-  @GradedTest(name="ComplexALUimagOutOnlyAdder", max_score=30)
+  @GradedTest(name="ComplexALUimagOutOnlyAdder", max_score=10)
   def verifyComplexALUimagOutOnlyAdder() {
 
     // Capture all of the console output from the test
@@ -132,7 +132,7 @@ class HW1Grader extends JUnitSuite {
   }
 
   @Test
-  @GradedTest(name="ComplexALUimagOut", max_score=30)
+  @GradedTest(name="ComplexALUimagOut", max_score=15)
   def verifyComplexALUimagOut() {
 
     // Capture all of the console output from the test
