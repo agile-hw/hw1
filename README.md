@@ -23,7 +23,7 @@ To familiarize ourselves with the Chisel bit-wise operators we will fill in the 
 
 
 ## Problem 2 - Write a Chisel Test (10pts)
-We can use Scala to write exhaustive tests for our modules assuming the input space is relatively small. In this problem, we provide the `Problem2` in the file `src/main/scala/hw1/HW1.scala`. Your job is to edit the file `src/test/scala/hw1/HW1Spec.scala` and fill in the unimplemented test using Chisel `peek, poke, and expect`. Make sure to test that the output is correct for all `8` possible input values. You may run your test using the command `sbt test` from your terminal. We strongly encourage you to write your own tests for the other problems as well but they will not be graded.
+We can use Scala to write exhaustive tests for our modules assuming the input space is relatively small. In this problem, we provide the `Problem2` module in the file `src/main/scala/hw1/HW1.scala`. Your job is to edit the file `src/test/scala/hw1/Problem2Test.scala` and fill in the unimplemented `testProblem2` function using Chisel `peek, poke, and expect`. Make sure to test that the output is correct for all `8` possible input values. You may run your test using the command `sbt test` from your terminal. We strongly encourage you to fill in your own tests for the other problems located in `src/test/scala/hw1/HW1TestSuite.scala` but they will not be graded.
 
 
 ## Problem 3 - Polynomial Evaluator (20pts)
