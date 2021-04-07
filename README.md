@@ -40,7 +40,7 @@ Given `3` input coefficients `c0, c1, and c2` and variable `x`, fill in the rest
         - out: UInt of sufficient width to support growth
         
 - Assignments
-    - out0: 
+    - out: 
         - if `enable` is high: `c0 * x^0 + c1 * x^1 + c2 * x^2`
         - if `enable` is low: `0`
 
