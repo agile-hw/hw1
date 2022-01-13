@@ -19,10 +19,7 @@ class HW1Tester extends AnyFlatSpec with ChiselScalatestTester {
     }
   }
 
-  behavior of "Problem2"
-  it should "correctly pass tests on all 8 inputs" in {
-    org.scalatest.run(new Problem2Tester)
-  }
+  // See src/test/scala/hw1/Problem2Tester.scala for Problem2
 
   behavior of "PolyEval"
   it should "correctly calculate out" in {
