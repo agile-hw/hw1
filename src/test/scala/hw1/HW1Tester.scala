@@ -2,40 +2,55 @@
 
 package hw1
 
-import chisel3.tester._
-import org.scalatest.FreeSpec
+import chisel3._
+import chiseltest._
+import org.scalatest.flatspec.AnyFlatSpec
 
-import scala.language.implicitConversions
-class HW1Tester extends FreeSpec with ChiselScalatestTester {
-    "CombLogic should correctly calculate out0" in {
-        assert(CombLogicBehavior.testCombLogicOut0)
+class HW1Tester extends AnyFlatSpec with ChiselScalatestTester {
+  behavior of "CombLogic"
+  it should  "correctly calculate out0" in {
+    test(new CombLogic) { c =>
+      ???
     }
-    
-    "CombLogic should correctly calculate out1" in {
-        assert(CombLogicBehavior.testCombLogicOut1)
+  }
+  it should "correctly calculate out1" in {
+    test(new CombLogic) { c =>
+      ???
     }
+  }
 
-    "Problem2 should correctly pass tests on all 8 inputs" in {
-        assert(Problem2Behavior.testProblem2)
+  behavior of "Problem2"
+  it should "correctly pass tests on all 8 inputs" in {
+    org.scalatest.run(new Problem2Tester)
+  }
+
+  behavior of "PolyEval"
+  it should "correctly calculate out" in {
+    val c0 = ???
+    test(new PolyEval(c0, c0, c0)) { dut =>
+      ???
     }
-    
-    "PolyEval should correctly calculate out" in {
-        assert(PolyEvalBehavior.testPolyEvalOut)
+  }
+
+  behavior of "ComplexALU"
+  it should "correctly calculate realOut onlyAdd=true" in {
+    test(new ComplexALU(onlyAdder=true)) { dut =>
+      ???
     }
-    
-    "ComplexALU should correctly calculate realOut onlyAdd=true" in {
-        assert(ComplexALUBehavior.testComplexALUrealOutOnlyAdder)
+  }
+  it should "correctly calculate realOut onlyAdd=false" in {
+    test(new ComplexALU(onlyAdder = false)) { dut =>
+      ???
     }
-    
-    "ComplexALU should correctly calculate realOut onlyAdd=false" in {
-        assert(ComplexALUBehavior.testComplexALUrealOut)
+  }
+  it should "correctly calculate imagOut onlyAdd=true" in {
+    test(new ComplexALU(onlyAdder = true)) { dut =>
+      ???
     }
-    
-    "ComplexALU should correctly calculate imagOut onlyAdd=true" in {
-        assert(ComplexALUBehavior.testComplexALUimagOutOnlyAdder)
+  }
+  it should "correctly calculate imagOut onlyAdd=false" in {
+    test(new ComplexALU(onlyAdder = false)) { dut =>
+      ???
     }
-    
-    "ComplexALU should correctly calculate imagOut onlyAdd=false" in {
-        assert(ComplexALUBehavior.testComplexALUimagOut)
-    }
+  }
 }

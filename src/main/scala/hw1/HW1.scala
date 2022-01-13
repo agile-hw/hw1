@@ -3,6 +3,7 @@
 package hw1
 
 import chisel3._
+import chisel3.util._
 
 // Note ??? will compile but not work at runtime.
 
@@ -55,5 +56,13 @@ class PolyEval(c0: Int, c1: Int, c2: Int) extends Module {
   * io.imagOut: SInt() Output
   */
 class ComplexALU(onlyAdder: Boolean) extends Module {
-    val io = ???
+  val io = IO(new Bundle {
+      val doAdd   = Input(Bool())
+      val real0   = Input(SInt(5.W))
+      val imag0   = Input(SInt(5.W))
+      val real1   = Input(SInt(5.W))
+      val imag1   = Input(SInt(5.W))
+      val realOut = Output(SInt())
+      val imagOut = Output(SInt())
+  })
 }
