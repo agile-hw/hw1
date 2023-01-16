@@ -36,7 +36,7 @@ class MajorityCircuit extends Module {
   * c1: 6-bit Int
   * c2: 6-bit Int
   * io.enable: Bool Input
-  * io.x: 5-bit UInt Input
+  * io.x: 6-bit UInt Input
   * io.out: ???-bit UInt Output
   */
 class PolyEval(c0: Int, c1: Int, c2: Int) extends Module {
