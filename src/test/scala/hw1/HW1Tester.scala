@@ -9,7 +9,7 @@ import org.scalatest.flatspec.AnyFlatSpec
 class HW1Tester extends AnyFlatSpec with ChiselScalatestTester {
   behavior of "RiscvITypeDecoder"
   it should  "correctly decode instructions" in {
-    test(new CombLogic) { c =>
+    test(new RiscvITypeDecoder) { c =>
       ???
     }
   }
