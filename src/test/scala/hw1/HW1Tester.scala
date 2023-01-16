@@ -7,19 +7,14 @@ import chiseltest._
 import org.scalatest.flatspec.AnyFlatSpec
 
 class HW1Tester extends AnyFlatSpec with ChiselScalatestTester {
-  behavior of "CombLogic"
-  it should  "correctly calculate out0" in {
-    test(new CombLogic) { c =>
-      ???
-    }
-  }
-  it should "correctly calculate out1" in {
+  behavior of "RiscvITypeDecoder"
+  it should  "correctly decode instructions" in {
     test(new CombLogic) { c =>
       ???
     }
   }
 
-  // See src/test/scala/hw1/Problem2Tester.scala for Problem2
+  // See src/test/scala/hw1/MajorityCircuitTester.scala for Problem2
 
   behavior of "PolyEval"
   it should "correctly calculate out" in {

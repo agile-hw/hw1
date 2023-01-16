@@ -8,39 +8,41 @@ import chisel3.util._
 // Note ??? will compile but not work at runtime.
 
 /**
-  * io.b: Bool Input
-  * io.x: 6-bit UInt Input
-  * io.y: 6-bit UInt Input
-  * io.out0: Bool Output
-  * io.out1: 6-bit UInt Output
-  */
-class CombLogic extends Module {
+ * io.instWord: 32b UInt Input
+ * io.opcode: 7b UInt Output
+ * io.funct3: 3b UInt Output
+ * io.rs1: 5b UInt Output
+ * io.rd: 5b UInt Output
+ * io.immSignExtended: 32b UInt Output
+ */
+class RiscvITypeDecoder extends Module {
     val io = ???
 }
 
-class Problem2 extends Module {
+
+class MajorityCircuit extends Module {
     val io = IO(new Bundle {
-        val a   = Input(Bool())
-        val b   = Input(Bool())
-        val c   = Input(Bool())
+        val a = Input(Bool())
+        val b = Input(Bool())
+        val c = Input(Bool())
         val out = Output(Bool())
     })
-    
-    io.out := io.a & (io.b ^ io.c)
+    io.out := (io.a & io.b) | (io.a & io.c) | (io.b & io.c)
 }
 
+
 /**
-  * c0: 5-bit Int
-  * c1: 5-bit Int
-  * c2: 5-bit Int
+  * c0: 6-bit Int
+  * c1: 6-bit Int
+  * c2: 6-bit Int
   * io.enable: Bool Input
   * io.x: 5-bit UInt Input
   * io.out: ???-bit UInt Output
   */
 class PolyEval(c0: Int, c1: Int, c2: Int) extends Module {
-    require (c0 >= 0 && c0 < 32)
-    require (c1 >= 0 && c1 < 32)
-    require (c2 >= 0 && c2 < 32)
+  require (c0 >= 0 && c0 < 64)
+  require (c1 >= 0 && c1 < 64)
+  require (c2 >= 0 && c2 < 64)
     val io = ???
 }
 
