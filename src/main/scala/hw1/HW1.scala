@@ -1,5 +1,3 @@
-// See README.md for license details.
-
 package hw1
 
 import chisel3._
@@ -16,56 +14,54 @@ import chisel3.util._
  * io.immSignExtended: 32b UInt Output
  */
 class RiscvITypeDecoder extends Module {
-    val io = ???
+	val io = ???
 }
 
 
 class MajorityCircuit extends Module {
-    val io = IO(new Bundle {
-        val a = Input(Bool())
-        val b = Input(Bool())
-        val c = Input(Bool())
-        val out = Output(Bool())
-    })
-    io.out := (io.a & io.b) | (io.a & io.c) | (io.b & io.c)
+  val io = IO(new Bundle {
+    val a = Input(Bool())
+    val b = Input(Bool())
+    val c = Input(Bool())
+    val out = Output(Bool())
+  })
+  io.out := (io.a & io.b) | (io.a & io.c) | (io.b & io.c)
 }
 
-
 /**
-  * c0: 6-bit Int
-  * c1: 6-bit Int
-  * c2: 6-bit Int
-  * io.enable: Bool Input
-  * io.x: 6-bit UInt Input
-  * io.out: ???-bit UInt Output
-  */
+ * c0: 8-bit Int
+ * c1: 8-bit Int
+ * c2: 8-bit Int
+ * io.x: 8-bit UInt Input
+ * io.out: ???-bit UInt Output
+ */
 class PolyEval(c0: Int, c1: Int, c2: Int) extends Module {
-  require (c0 >= 0 && c0 < 64)
-  require (c1 >= 0 && c1 < 64)
-  require (c2 >= 0 && c2 < 64)
-    val io = ???
+  require(c0 >= 0 && c0 < 256)
+  require(c1 >= 0 && c1 < 256)
+  require(c2 >= 0 && c2 < 256)
+	val io = ???
 }
 
 
 /**
-  * onlyAdder: Boolean
-  * io.doAdd: Bool Input
-  * io.real0: 5-bit SInt Input
-  * io.imag0: 5-bit SInt Input
-  * io.real1: 5-bit SInt Input
-  * io.imag1: 5-bit SInt Input
-  * io.realOut: SInt() Output
-  * io.imagOut: SInt() Output
-  */
+ * onlyAdd: Boolean
+ * io.useAdd: Bool Input
+ * io.real0: 7-bit SInt Input
+ * io.imag0: 7-bit SInt Input
+ * io.real1: 7-bit SInt Input
+ * io.imag1: 7-bit SInt Input
+ * io.realOut: SInt() Output
+ * io.imagOut: SInt() Output
+ */
 class ComplexALU(onlyAdder: Boolean) extends Module {
   val io = IO(new Bundle {
-      val doAdd   = Input(Bool())
-      val real0   = Input(SInt(5.W))
-      val imag0   = Input(SInt(5.W))
-      val real1   = Input(SInt(5.W))
-      val imag1   = Input(SInt(5.W))
-      val realOut = Output(SInt())
-      val imagOut = Output(SInt())
+    val doAdd = Input(Bool())
+    val real0 = Input(SInt(7.W))
+    val imag0 = Input(SInt(7.W))
+    val real1 = Input(SInt(7.W))
+    val imag1 = Input(SInt(7.W))
+    val realOut = Output(SInt())
+    val imagOut = Output(SInt())
   })
-  ???
+	???
 }
